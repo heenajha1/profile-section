@@ -1,19 +1,21 @@
 "use client"
 import Link from 'next/link'
 import React from 'react'
+import styles from "./page.module.css"
+
 
 const Navbar = () => {
   return (
-    <div>
-    <Link href="/">Codemania</Link>
-    <div>
+    <div className={styles.container}>
+    <Link className={styles.logo} href="/">CodeGram</Link>
     
-    <Link href="/about">About</Link>
-    <Link href="/projects">Projects</Link>
-    <Link href="/socials">Socials</Link>
-    <Link href="/dashboard">Resume</Link>
-    <Link href="/contact">Contact</Link>
-    <button onClick={()=> {console.log("logged out")}}>
+    <div className={styles.links}>
+        <Link className={styles.link} href="/about">Profile</Link>
+        <Link className={styles.link} href="">Courses</Link>
+        <Link className={styles.link} href="">Socials</Link>
+        <Link className={styles.link} href="">Testimonials</Link>
+        <Link className={styles.link} href="/contact">Contact</Link>
+        <button className={styles.button} onClick={()=> {console.log("logged out")}}>
         Logout</button>
     </div>
 
